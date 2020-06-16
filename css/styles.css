@@ -2,19 +2,32 @@
 @import url('images.css');
 @import url('blog-posts.css');
 @import url('nav.css');
-div {
-    border: 1px solid red
-}
 
 body {
-
     color: #8ca836;
     background-color: #46541B;
     justify-content: center;
-
+    font-size: .6rem;
 }
 
 a:link,
 a:visited {
-    color:#8ca836
+    color:#8ca836;
+}
+
+.post-card {
+    border-radius: 2rem;
+    box-shadow: .7rem .7rem 1rem .5rem #28300F;
+}
+
+@media(min-width: 900px) and (max-width: 1600px) {
+    body{
+        font-size: .7rem;
+    }
+}
+
+@media(min-width: 1601px) {
+    body{
+        font-size: 1rem;
+    }
 }

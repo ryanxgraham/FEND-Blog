@@ -7,64 +7,100 @@
     grid-template-columns: repeat(7,10vw);
     grid-template-rows: repeat(8, 10vh)
 }
+
 .header {
     grid-area: 1/1/1/8;
+    justify-content: center;
 }
+
 .nav {
-    grid-area: 2/1/3/3
+    grid-area: 2/1/3/3;
 }
+
 .post-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     grid-area: 2/3/6/8;
-    padding: 5px
+    padding: 5px;
 }
 
 .post-card {
+    max-width: 300px;
+    max-height: 300px;
     display:flex;
     flex-direction: column;
-    width: 250px;
-    height: 300px;
     align-items: center;
     justify-content: center;
-
+    align-content: space-between;
+    padding: 10px;
+    margin:10px;
 }
+
 .post-header {
-
+    height: 20%;
+    width:100%;
+    margin: 3px;
 }
+
 .post-button {
+    padding: 5px;
+    margin: 5px;
+}
 
-}
-.post-thumb {
-    height: 200px;
-    width: 200px;
-}
 .author-info {
-    grid-area: 4/1/5/3
+    grid-area: 4/1/5/3;
 }
+
 .post-social {
     grid-area: 6/1/7/3;
-
 }
+
 .post-content {
     width: 50vw;
     display: grid;
-    justify-content: flex-start;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-area: 2/3/7/8
+    justify-content: center;
+    grid-area: 2/3/7/8;
+    grid-template-columns: 50% 50%;
 }
-.post-title {
-    grid-area: 1/1/1/5
-}
-.post-img {
-    grid-area: 2/1/5/2;
-    width: 400px;
-    height: 400px;
-}
+
 .post-text {
-    grid-area: 2/3/5/5
+    padding: 5px;
+    margin: 5px;
+    grid-column: 2/2;
 }
+
 .footer {
     align-self: flex-end;
+}
+
+@media(min-width: 900px) and (max-width: 1600px) {
+    .post-card{
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .post-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        grid-area: 2/3/6/8;
+        padding: 5px;
+    }
+}
+@media(min-width: 1601px) {
+    .post-card{
+        max-width: 450px;
+        max-height: 450px;
+    }
+
+    .post-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        grid-area: 2/3/6/8;
+        padding: 5px;
+    }
 }
