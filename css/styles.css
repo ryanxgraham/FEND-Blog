@@ -1,0 +1,20 @@
+@import url('layout.css');
+@import url('images.css');
+@import url('blog-posts.css');
+@import url('nav.css');
+div {
+    border: 1px solid red
+}
+
+body {
+
+    color: #8ca836;
+    background-color: #46541B;
+    justify-content: center;
+
+}
+
+a:link,
+a:visited {
+    color:#8ca836
+}
